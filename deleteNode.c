@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-
+#include <limits.h>
 struct node {
     int data;
     struct node *left, *right;
@@ -117,19 +117,20 @@ void deleteNode(struct node **rootRef, int x) {
     }
 }
 
-void inorder(struct node *root) {
-    struct node *curr = root;
-    while (curr != NULL || top != -1) {
-        while (curr != NULL) {
-            push(curr);
-            curr = curr->left;
+void inorder(struct node **root){
+    struct node* ptr=*root;
+    while(ptr!=NULL || top!=-1){
+        while(ptr!=NULL){
+            push(ptr);
+            ptr=ptr->left;
         }
-        curr = pop();
-        printf("%d ", curr->data);
-        curr = curr->right;
+        ptr=pop();
+        printf("%d ",ptr->data);
+        ptr=ptr->right;
     }
     printf("\n");
 }
+
 
 void preorder(struct node *root) {
     if (root != NULL) {
@@ -146,11 +147,28 @@ void postorder(struct node *root) {
         printf("%d ", root->data);
     }
 }
+void findMaxElement(struct node* root){
+   int max=INT_MIN;
+   struct node* curr=root;
+   while(curr!=NULL || top!=-1){
+        while(curr!=NULL){
+            push(curr);
+            curr=curr->left;
+        }
+    curr=pop();
+    if(curr->data>=max){
+            max=curr->data;
+    }
+    // printf("%d",curr->data);
+    curr=curr->right;
+   }
+   printf("max element is: %d",max);
+}
 
 int main() {
     int ch, x;
     while (1) {
-        printf("1.insertNode 2.inorder 3.preorder 4.postorder 5.deleteNode 6.exit\n");
+        printf("1.insertNode 2.inorder 3.preorder 4.postorder 5.deleteNode 6.find max element 0.exit\n");
         scanf("%d", &ch);
         switch (ch) {
             case 1:
@@ -160,7 +178,7 @@ int main() {
                 break;
             case 2:
                 printf("Inorder traversal\n");
-                inorder(root);
+                inorder(&root);
                 break;
             case 3:
                 printf("Preorder traversal\n");
@@ -178,6 +196,9 @@ int main() {
                 deleteNode(&root, x);
                 break;
             case 6:
+                findMaxElement(root);
+                break;
+            case 0:
                 exit(0);
             default:
                 printf("Invalid choice!!\n");
