@@ -4,14 +4,9 @@ import javax.swing.*;
 class calc extends JPanel implements ActionListener{
     private JButton b1,b2,b3,b4,b5,b6,b7,b8,b9,b0,bmul,badd,bdiv,bsub,beql,bclr;
     public calc(){
-        JFrame f=new JFrame("Calculator");
-        JPanel p=new JPanel();
-        p.setBounds(0,0,600,800);
+        setBounds(0,0,600,800);                                                                                                    
         
-        f.setLayout(null);
-        f.setSize(700,900);
-        f.setVisible(true);
-        JTextField t=new JTextField();
+        JTextField new JTextField();
         b1=new JButton("1");
         b2=new JButton("2");
         b3=new JButton("3");
@@ -31,8 +26,6 @@ class calc extends JPanel implements ActionListener{
         bclr=new JButton("Clear");
 
         add(b1);
-       
-
 
     }
     public void actionPerformed(ActionEvent e){
@@ -41,6 +34,11 @@ class calc extends JPanel implements ActionListener{
 }
 public class calculator{
     public static void main(String[] args) {
+        JFrame f=new JFrame("Calculator");
+        f.setLayout(null);
+        f.setSize(700,900);
+        f.setVisible(true);
         calc c=new calc();
+        f.add(c);
     }
 }
