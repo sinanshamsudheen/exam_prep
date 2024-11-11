@@ -18,7 +18,6 @@ public class shapes extends JPanel{
                 y2=e.getY();
                 repaint();
             }
-
         });
         addMouseMotionListener(new MouseMotionAdapter() {
             public void mouseDragged(MouseEvent e) {
@@ -39,7 +38,6 @@ public class shapes extends JPanel{
                 g.drawLine(x1, y1, x2, y2);
             }
         }
-    
 
     public static void main(String[] args){
         JFrame f=new JFrame();
