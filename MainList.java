@@ -44,10 +44,10 @@ class ItemList {
         return price * quantity;
     }
 
-    @Override
-    public String toString() {
-        return "ItemNumber: " + itemNumber + ", Name: " + name + ", Price: " + price + ", Quantity: " + quantity;
-    }
+    // @Override
+    // public String toString() {
+    //     return "ItemNumber: " + itemNumber + ", Name: " + name + ", Price: " + price + ", Quantity: " + quantity;
+    // }
 }
 
 class ItemStock {
@@ -103,7 +103,6 @@ class ItemStock {
         }
     }
 }
-
 public class MainList {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);

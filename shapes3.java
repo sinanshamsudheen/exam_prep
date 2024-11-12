@@ -1,11 +1,14 @@
+
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
-public class shapes2 extends JPanel{
+
+
+public class shapes3 extends JPanel{
     String shape="rect";
     int x1,x2,y1,y2;
-    public shapes2(){
-        addMouseListener(new MouseAdapter() {
+    public shapes3(){
+        addMouseListener(new MouseAdapter(){
             public void mousePressed(MouseEvent e){
                 x1=e.getX();
                 y1=e.getY();
@@ -38,19 +41,19 @@ public class shapes2 extends JPanel{
         }
     }
     public static void main(String[] args) {
-        shapes2 shp=new shapes2();
+        shapes3 shp=new shapes3();
         JFrame f=new JFrame();
         JPanel p=new JPanel();
+        String[] buttons={"rect","oval","line"};
 
-        String[] b={"rect","oval","line"};
-        for(String text: b){
-            JButton button=new JButton(text);
-            button.addActionListener(e->shp.shape=text);
-            p.add(button);
+        for(String text:buttons){
+            JButton b=new JButton(text);
+            b.addActionListener(e->shp.shape=text);
+            p.add(b);
         }
         f.add(p,BorderLayout.NORTH);
         f.add(shp);
-        f.setSize(400,600);
+        f.setSize(400,400);
         f.setVisible(true);
         f.setLayout(null);
         f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

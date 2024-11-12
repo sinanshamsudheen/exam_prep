@@ -16,8 +16,8 @@ class lights extends JPanel implements ActionListener{
         r2=new JRadioButton("Yellow");
         r3=new JRadioButton("Green");
 
-        r1.setSelected(true);
-        red_c=Color.red;
+        // r1.setSelected(true);
+        red_c=getBackground();
         green_c=getBackground();
         yellow_c=getBackground(); 
         ButtonGroup gp= new ButtonGroup();
@@ -48,6 +48,7 @@ class lights extends JPanel implements ActionListener{
         }
         repaint();
     }
+    @Override
     public void paintComponent(Graphics g){
         super.paintComponent(g);
         g.drawOval(30,50,50,50);

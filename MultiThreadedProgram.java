@@ -20,13 +20,19 @@ class NumberGenerator extends Thread {
 class Square extends Thread {
     int num;
     Square(int num) { this.num = num; }
-    public void run() { System.out.println("Square of " + num + " = " + (num * num)); }
+    public void run() { 
+        System.out.println("Square of " + num + " = " + (num * num));
+     }
 }
 
 class Cube extends Thread {
     int num;
-    Cube(int num) { this.num = num; }
-    public void run() { System.out.println("Cube of " + num + " = " + (num * num * num)); }
+    Cube(int num) {
+         this.num = num; 
+        }
+    public void run() { 
+        System.out.println("Cube of " + num + " = " + (num * num * num)); 
+    }
 }
 
 public class MultiThreadedProgram {

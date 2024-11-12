@@ -17,11 +17,6 @@ public class matrixMult{
             }
             System.out.println();
         }
-        // for(int i=0;i<r1;i++){
-        //     for(int j=0;j<c1;j++){
-        //     }
-        //     System.out.println();
-        // }
     }
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
@@ -30,6 +25,7 @@ public class matrixMult{
         int c1=sc.nextInt();
         int[][] a1=new int[100][100];
         int[][] a2=new int[100][100];
+
         System.out.println("enter the elements for first matrix:");
         for(int i=0;i<r1;i++){
             for(int j=0;j<c1;j++){
@@ -39,6 +35,7 @@ public class matrixMult{
         System.out.println("Enter the number of rows and columns of the second matrix: ");
         int r2=sc.nextInt();
         int c2=sc.nextInt();
+
         System.out.println("enter the elements for second matrix:");
         for(int i=0;i<r2;i++){
             for(int j=0;j<c2;j++){
@@ -49,8 +46,19 @@ public class matrixMult{
         if(c1!=r2){
             System.out.println("Matrix multiplication is not possible");
         }else{
+            System.out.println("Result: ");
             obj.result(a1, a2, r1, r2, c2);
         }
-
     }
 }
+// Enter the number of rows and columns of the first matrix: 
+// 2 2
+// enter the elements for first matrix:
+// 1 1 2 2
+// Enter the number of rows and columns of the second matrix: 
+// 2 3
+// enter the elements for second matrix:
+// 1 1 1 2 2 2
+//Result:
+// 3 3 3 
+// 6 6 6

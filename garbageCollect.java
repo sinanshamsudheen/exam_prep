@@ -4,7 +4,6 @@ public class garbageCollect {
         garbageCollect obj2 = new garbageCollect();
         
         // Assign obj1 to obj2, now obj1 is eligible for garbage collection
-        obj2 = obj1;
         obj1 = null;
         
         // Suggesting JVM to run Garbage Collector

@@ -68,3 +68,13 @@ public class PalindromeFile2{
     }
 }
 //o,p
+// enter ur string: 
+// sinan wataw rotor food
+// a Repeated 1 times.
+// i Repeated 1 times.
+// n Repeated 2 times.
+// s Repeated 1 times.
+
+// d Repeated 1 times.
+// f Repeated 1 times.
+// o Repeated 2 times.

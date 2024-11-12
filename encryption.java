@@ -42,5 +42,9 @@ public class encryption {
     }
 }
 //o,p
-string
+// Enter a string to encrypt:
+// sinan
+// Decrypted string: sinan
+
+// inside sample.txt: ukpcp
 
