@@ -62,3 +62,6 @@ public class dLL {
         l.traverse();
     }
 }
+// o/p,
+// 3-> 5-> 7-> 9-> 0-> NULL
+// 3-> 5-> 9-> 0-> NULL

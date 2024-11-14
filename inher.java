@@ -47,8 +47,6 @@ public class inher{
         System.out.println(of.age);
         System.out.println(of.specialization);
         of.printSalary();
-
-
     }
 }
 

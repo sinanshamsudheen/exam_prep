@@ -33,7 +33,8 @@ public class threadSynchro { // Define the main class
 
         thread1.start(); // Start the first thread
         thread2.start(); // Start the second thread
-
+        thread1.join();
+        thread2.join();
         // try {
         //     thread1.join(); // Wait for the first thread to finish
         //     thread2.join(); // Wait for the second thread to finish

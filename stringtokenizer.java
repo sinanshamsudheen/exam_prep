@@ -17,5 +17,10 @@ public class stringtokenizer{
         System.out.println("the sum of elements is : "+sum);
         sc.close();
     }
-    
 }
+// enter numbers separated by a gap: 
+// 30 40 60
+// 30
+// 40
+// 60
+// the sum of elements is : 130

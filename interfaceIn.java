@@ -7,6 +7,7 @@ interface array{
 class singlearray implements array{
     @Override
     public void sort(int arr[]){
+        System.
         int n=arr.length;
         for(int i=0;i<n-2;i++){
             for(int j=i+1;j<n-1;j++){
@@ -21,7 +22,10 @@ class singlearray implements array{
     @Override
     public void insert(int arr[],int data){
         int n=arr.length;
-        arr[n]=data;
+        int[] newArr=new int[n+1];
+        System.arraycopy(arr,0,newArr,0,n);
+        newArr[n]=data;
+        System.out.println("inserted to the array");
     }
     @Override
     public void delete(int arr[],int key){
@@ -45,7 +49,7 @@ class singlearray implements array{
         int n=arr.length;
         int high=n-1;
         
-        while(low<high){
+        while(low<=high){
             int mid=(high-low)/2;
             if(key<arr[mid]){
                 high=mid;
