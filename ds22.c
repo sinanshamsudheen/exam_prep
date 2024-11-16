@@ -1,8 +1,8 @@
 #include<stdio.h>
 #define MX 10
 
-int top=-1,top2=-1,top3=-1;
-int stack[100],s2[100],s3[100];
+int top=-1,top3=-1;
+int stack[100],s3[100];
 void push1(int val){
     if(top==MX){
         printf("stack full");
@@ -11,14 +11,7 @@ void push1(int val){
         stack[++top]=val;
     }
 }
-void push2(int val){
-    if(top2==MX){
-        printf("stack full");
-    }
-    else{
-        s2[++top2]=val;
-    }
-}
+
 void push3(int val){
     if(top3==MX){
         printf("stack full");
@@ -45,27 +38,29 @@ int pop3(){
 }
 void main(){
     int n,key,val;
-    printf("enter the 9 integers: ");
-    for(int i=0;i<9;i++){
+    printf("enter 5 integers: ");
+    for(int i=0;i<5;i++){
         scanf("%d",&n);
         push1(n);
     }
-    printf("enter threshold: ");
-    scanf("%d",&key);
+    int mx=-99999;
+    int tempTop=top;
+    while(tempTop!=-1){
+        if(stack[tempTop]>=mx){
+            mx=stack[tempTop];
+        }
+            tempTop--;
+    }
     while(top!=-1){
-        if(stack[top]>=key){
-            val=pop();
-            push2(val);
-        }else{
-            val=pop();
+        val=pop();
+        if(val!=mx){
             push3(val);
         }
     }
-    if(top2==-1){
-        printf("no values greater than threshold!");
-    }
-    printf("the stack after removing values greater than threshold: ");
+    printf("the stack after removing the greatest value: ");
     while(top3>=0){
         printf("%d, ",pop3());
     }
 }
+// enter 5 integers: 1 2 3 4 5
+// the stack after removing the greatest value: 1, 2, 3, 4,
