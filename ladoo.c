@@ -32,6 +32,7 @@ int traverse(struct Node* head){
         printf("%d ->",temp->data);
         temp=temp->next;
     }
+    printf("NULL\n");
 }
 void OnlyUnique(struct Node** head1,struct Node** head2){
     struct Node* temp1=*head1;
@@ -66,3 +67,5 @@ void main(){
     printf("displaying unique laddoos: ");
     traverse(head2);
 }
+// enter ur ladoo sizes(end with -999)2 2 5 6 7 8 8 -999
+// displaying unique laddoos: 2 ->5 ->6 ->7 ->8 ->NULL

@@ -17,8 +17,6 @@ class convert{
         }catch(IOException e){
             e.printStackTrace();
         }
-
-
     }
     public String toEncrypt(String line){
         StringBuilder s=new StringBuilder();

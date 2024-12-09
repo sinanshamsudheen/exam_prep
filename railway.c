@@ -81,3 +81,68 @@ void main(){
 
     }while(n!=0);
 }
+
+// RAILWAY COUNTER
+// 1-enqueue a customer
+// 2-display the queue
+// 3-token at the front
+// 4-size of queue
+// 5-dequeue a customer
+// 0-exit
+// : 1
+// enter customer token: 4
+// enter customer ticket count: 5
+// RAILWAY COUNTER
+// 1-enqueue a customer
+// 2-display the queue
+// 3-token at the front
+// 4-size of queue
+// 5-dequeue a customer
+// 0-exit
+// : 2
+// [2,3] [3,4] [2,3] [4,5] 
+// RAILWAY COUNTER
+// 1-enqueue a customer
+// 2-display the queue
+// 3-token at the front
+// 4-size of queue
+// 5-dequeue a customer
+// 0-exit
+// : 3
+// customer token at front: 2
+// RAILWAY COUNTER
+// 1-enqueue a customer
+// 2-display the queue
+// 3-token at the front
+// 4-size of queue
+// 5-dequeue a customer
+// 0-exit
+// : 4
+// size of the queue : 4
+// RAILWAY COUNTER
+// 1-enqueue a customer
+// 2-display the queue
+// 3-token at the front
+// 4-size of queue
+// 5-dequeue a customer
+// 0-exit
+// : 5
+// dequed token 2.
+// RAILWAY COUNTER
+// 1-enqueue a customer
+// 2-display the queue
+// 3-token at the front
+// 4-size of queue
+// 5-dequeue a customer
+// 0-exit
+// : 4
+// size of the queue : 3
+// RAILWAY COUNTER
+// 1-enqueue a customer
+// 2-display the queue
+// 3-token at the front
+// 4-size of queue
+// 5-dequeue a customer
+// 0-exit
+// : 2
+// [3,4] [2,3] [4,5] 

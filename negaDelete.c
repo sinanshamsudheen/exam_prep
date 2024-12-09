@@ -79,3 +79,5 @@ void main(){
     deleteNega(&head);
     traverse(head);
 }
+// -1 -> 1 -> 2 -> -2 -> 3 -> NULL
+// 1 -> 2 -> 3 -> NULL

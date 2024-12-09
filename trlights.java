@@ -72,3 +72,4 @@ public class trlights extends JPanel implements ActionListener{
         f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
 }
+int y=(int)(amplitude*Math.sin(2*Math.PI))

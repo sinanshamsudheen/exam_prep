@@ -75,8 +75,7 @@ class Mycalculator extends JFrame implements ActionListener{
                 operand1=String.valueOf(res);
                 operand2="";
                 operator=command;
-             display.setText(operand1+operator+operand2);
-
+                display.setText(operand1+operator+operand2);
             }
         }
     }

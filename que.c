@@ -10,14 +10,14 @@ void enque(int val){
         front=0;
         rear=0;
     }
-    if(rear==MX){
+    if(rear>MX){
         printf("Q full");
     }else{
         Q[rear++]=val;
     }
 }
 int deq(){
-    if(front==-1 && rear==-1){
+    if(front==-1 || front>rear){
         printf("Q empty");
     }
     return Q[front++];

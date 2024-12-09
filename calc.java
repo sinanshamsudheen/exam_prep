@@ -140,7 +140,7 @@ public class calc extends JFrame implements ActionListener {
                 flag = 4;
             }
             if(ae.getSource()==bClear){
-                t1.setText("");
+            t1.setText("");
             }
             if (ae.getSource() == b15) {
                 b = Integer.parseInt(t1.getText());

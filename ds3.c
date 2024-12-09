@@ -35,26 +35,33 @@ void traverse(struct Node* head) {
 void sortNmerge(struct Node** head1,struct Node** head2,struct Node** head3){
     struct Node* temp1=*head1;
     struct Node* temp2=*head2;
-    while (temp1 != NULL) {
-        if (temp1->data % 2 == 0) {
-            insertAtend(head3, temp1->data);
-        } else {
-            insertAtend(head3, temp1->data);
+    while(temp1!=NULL){
+        if(temp1->data%2==0){
+            insertAtend(head3,temp1->data);
         }
-        temp1 = temp1->next;
+        temp1=temp1->next;
     }
-
-    // Traverse the second list
-    while (temp2 != NULL) {
-        if (temp2->data % 2 == 0) {
-            insertAtend(head3, temp2->data);
-        } else {
-            insertAtend(head3, temp2->data);
+    while(temp2!=NULL){ 
+        if(temp2->data%2==0){
+            insertAtend(head3,temp2->data);
         }
-        temp2 = temp2->next;
+        temp2=temp2->next;
+    }
+    temp1=*head1;
+    temp2=*head2;
+    while(temp1!=NULL){
+        if(temp1->data%2!=0){
+            insertAtend(head3,temp1->data);
+        }
+        temp1=temp1->next;
+    }
+    while(temp2!=NULL){ 
+        if(temp2->data%2!=0){
+            insertAtend(head3,temp2->data);
+        }
+        temp2=temp2->next;
     }
 }
-
 void main(){
     struct Node* head1=NULL;
     struct Node* head2=NULL;

@@ -83,13 +83,6 @@ void inorder(struct Node* head){
     }
     printf("\n");
 }
-void preorder(struct Node* head){
-    if(head!=NULL){
-        printf("%d",head->data);
-        preorder(head->left);
-        preorder(head->right);
-    }
-}
 
 void levelOrder(struct Node* root){
     struct Node* curr=NULL;
@@ -112,7 +105,7 @@ void main(){
     struct Node* head=NULL;
     int n,ch;
     do{
-        printf("enter 1-insert 2-inorder 3-level order 4-postorder 5-  0-exit\n");
+        printf("enter 1-insert 2-inorder 3-level order 5-  0-exit\n");
         scanf("%d",&n);
         switch(n){
             case 1:

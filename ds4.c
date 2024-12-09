@@ -137,3 +137,42 @@ void main()
         }
     }
 }
+// o,p
+// 1.insertNode 2.inorder 3.shoot 0.exit
+// 1
+// Enter data to enter:15
+// Root node created with data 15
+// 1.insertNode 2.inorder 3.shoot 0.exit
+// 1
+// Enter data to enter:5
+// 1.insertNode 2.inorder 3.shoot 0.exit
+// 1
+// Enter data to enter:3
+// 1.insertNode 2.inorder 3.shoot 0.exit
+// 1
+// Enter data to enter:10
+// 1.insertNode 2.inorder 3.shoot 0.exit
+// 1
+// Enter data to enter:7
+// 1.insertNode 2.inorder 3.shoot 0.exit
+// 1
+// Enter data to enter:20
+// 1.insertNode 2.inorder 3.shoot 0.exit
+// 1
+// Enter data to enter:25
+// 1.insertNode 2.inorder 3.shoot 0.exit
+// 2
+// Inorder traversal
+// 3 ->5 ->7 ->10 ->15 ->20 ->25 ->
+// 1.insertNode 2.inorder 3.shoot 0.exit
+// 3
+// enter key to shoot
+// 4
+// displaying elements greater than m: 
+// 5 ->7 ->10 ->15 ->20 ->25 ->
+// 1.insertNode 2.inorder 3.shoot 0.exit
+// 3
+// enter key to shoot
+// 5
+// displaying elements greater than m: 
+// 7 ->10 ->15 ->20 ->25 ->

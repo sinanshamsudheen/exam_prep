@@ -10,7 +10,7 @@ class bookmanager
         {
             FileWriter f=new FileWriter(FILE_NAME,true);
             String data=isbn + " " + title +" " +author + " " + price+" "+pages+" "+pubdate;
-            f.write(data);
+            f.write(data+"\n");
             System.out.println("Book Added successfully.");
             f.close();  
         }

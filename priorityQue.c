@@ -69,3 +69,14 @@ void main(){
     pop(&head);
     traverse(head);
 }
+// enter elements (end with -999)enter data: 2
+// enter priority: 1
+// enter data: 3
+// enter priority: 3
+// enter data: 4
+// enter priority: 5
+// enter data: -99
+// enter priority: 8
+// enter data: -999
+// [2,1] ->[3,3] ->[4,5] ->[-99,8] ->NULL
+// [3,3] ->[4,5] ->[-99,8] ->NULL
