@@ -122,3 +122,6 @@ void main() {
     printf("List after deleting at end: ");
     traverse(head);
 }
+// List after insertions: 3 -> 2 -> 4 -> 5 -> (back to head)
+// List after deleting at head: 2 -> 4 -> 5 -> (back to head)
+// List after deleting at end: 2 -> 4 -> (back to head)
