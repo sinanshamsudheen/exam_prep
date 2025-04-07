@@ -2,7 +2,7 @@
 #include<stdlib.h>
 #include<math.h>
 
-void SCAN(int request[],int n,int head,int disksize){
+void CSCAN(int request[],int n,int head,int disksize){
     for(int i=0;i<n-1;i++){
         for(int j=0;j<n-i-1;j++){
             if(request[j]>request[j+1]){
@@ -25,15 +25,17 @@ void SCAN(int request[],int n,int head,int disksize){
                     printf("%d ",head);
                 }
                 if(head!=(disksize-1)){
-                    seek_time+=abs(request[i]-(disksize-1));
+                    seek_time+=abs(head-(disksize-1));
                     head=disksize-1;
                     printf("%d ",head);
                 }
-                for(int j=i-1;j>=0;j--){
-                    seek_time+=abs(request[j]-head);
+                head=0;
+                seek_time+=disksize-1;
+                printf("%d ",head);
+                for(int j=0;j<i;j++){
+                    seek_time+=abs(head-request[j]);
                     head=request[j];
                     printf("%d ",head);
-
                 }
                 break;
             }
@@ -41,8 +43,8 @@ void SCAN(int request[],int n,int head,int disksize){
         printf("seek time = %d",seek_time);
     }
     else{
-        for(int i=0;i<n;i++){
-            if(request[i+1]>=head){
+        for(int i=n-1;i>=0;i--){
+            if(request[i]<=head){
                 for(int j=i;j>=0;j--){
                     seek_time+=abs(request[j]-head);
                     head=request[j];
@@ -53,7 +55,11 @@ void SCAN(int request[],int n,int head,int disksize){
                     head=0;
                     printf("%d ",head);
                 }
-                for(int j=i+1;j<n;j++){
+                seek_time+=disksize-1;
+                head=disksize-1;
+                printf("%d ",head);
+
+                for(int j=n-1;j>i;j--){
                     seek_time+=abs(head-request[j]);
                     head=request[j];
                     printf("%d ",head);
@@ -74,7 +80,7 @@ int main(){
     }
     printf("enter head: ");
     scanf("%d",&head);
-    SCAN(request,n,head,disksize);
+    CSCAN(request,n,head,disksize);
   
   return 0;
 }
