@@ -23,6 +23,7 @@ void sortByPrio(){
         }
     }
 }
+
 void calcpsh(){
     int curr=0;
     for(int i=0;i<n;i++){

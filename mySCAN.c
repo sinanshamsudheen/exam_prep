@@ -25,7 +25,7 @@ void SCAN(int request[],int n,int head,int disksize){
                     printf("%d ",head);
                 }
                 if(head!=(disksize-1)){
-                    seek_time+=abs(request[i]-(disksize-1));
+                    seek_time+=abs(head-(disksize-1));
                     head=disksize-1;
                     printf("%d ",head);
                 }

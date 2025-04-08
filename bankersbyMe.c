@@ -46,6 +46,25 @@ bool isSafe(){
     }printf("\n");
     return 1;
 }
+
+void requestResources(int process,int resource[100]){
+        for(int j=0;j<m;j++){
+            available[j]-=resource[j];
+            allocation[process][j]+=resource[j];
+            need[process][j]-=resource[j];
+        }
+        if(isSafe){
+            printf("\nyes we can safely allocate those resources!\n");
+        }else{
+            printf("no we cant! giving back the resources");
+        }
+        for(int j=0;j<m;j++){
+            available[j]+=resource[j];
+            allocation[process][j]-=resource[j];
+            need[process][j]+=resource[j];
+        }
+    }
+}
 int main(){
     printf("Enter number of processes and resources: ");
     scanf("%d %d", &n, &m);
@@ -80,18 +99,18 @@ int main(){
 
     // Check initial system state
 
-    // // Handling a resource request
-    // int process;
-    // int request[MAX_RESOURCES];
+    // Handling a resource request
+    int process;
+    int request[MAX_RESOURCES];
 
-    // printf("\nEnter process number requesting resources: ");
-    // scanf("%d", &process);
+    printf("\nEnter process number requesting resources: ");
+    scanf("%d", &process);
 
-    // printf("Enter requested resources: ");
-    // for (int i = 0; i < m; i++)
-    //     scanf("%d", &request[i]);
+    printf("Enter requested resources: ");
+    for (int i = 0; i < m; i++)
+        scanf("%d", &request[i]);
 
-    // requestResources(process, request);
+    requestResources(process, request);
   
   return 0;
 }
